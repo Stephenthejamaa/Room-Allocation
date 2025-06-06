@@ -51,7 +51,7 @@ def main():
     while True:
         print("\n=== Room Allocation System ===")
         print("1. Show Available Rooms")
-        print("2. Book a Room")
+        
         print("3. View All Bookings")
         print("4. Exit")
         choice = input("Choose an option: ")
