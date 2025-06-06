@@ -8,6 +8,8 @@ rooms = {
     202: ["Double", True, 4500],
     301: ["Deluxe", True, 6000],
     302: ["Deluxe", True, 6000],
+    303: ["Deluxe", True, 5656],
+    #Halooo this is Lawrence
 }
 
 # Store bookings: Room Number : visitor Name
