@@ -10,7 +10,7 @@ rooms = {
     302: ["Deluxe", True, 6000],
 }
 
-# Store bookings: Room Number : Guest Name
+# Store bookings: Room Number : visitor Name
 bookings = {}
 
 def show_available_rooms():
@@ -28,12 +28,12 @@ def book_room():
     try:
         room_no = int(input("\nEnter room number to book: "))
         if room_no in rooms and rooms[room_no][1]:
-            guest = input("Enter guest name: ")
+            visitor = input("Enter visitor name: ")
             nights = int(input("Enter number of nights: "))
             total_cost = rooms[room_no][2] * nights
-            bookings[room_no] = guest
+            bookings[room_no] = visitor
             rooms[room_no][1] = False
-            print(f"\nRoom {room_no} successfully booked for {guest}. Total charge: KES {total_cost}")
+            print(f"\nRoom {room_no} successfully booked for {visitor}. Total charge: KES {total_cost}")
         else:
             print("Room is not available or doesn't exist.")
     except ValueError:
@@ -44,8 +44,8 @@ def view_bookings():
         print("\nNo bookings yet.")
     else:
         print("\nCurrent Bookings:")
-        for room, guest in bookings.items():
-            print(f"Room {room} booked by {guest} | Type: {rooms[room][0]} | Charge per night: KES {rooms[room][2]}")
+        for room, visitor in bookings.items():
+            print(f"Room {room} booked by {visitor} | Type: {rooms[room][0]} | Charge per night: KES {rooms[room][2]}")
 
 def main():
     while True:
